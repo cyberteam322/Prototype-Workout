@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="id"><head><link rel="manifest" href="manifest.json"/><meta name="theme-color" content="#0b1326"/><meta name="mobile-web-app-capable" content="yes"/><meta name="apple-mobile-web-app-capable" content="yes"/><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/><meta name="apple-mobile-web-app-title" content="FitHome"/><link rel="apple-touch-icon" href="icons/icon-192.png"/><link rel="icon" href="icons/icon-192.png"/><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "inverse-primary": "#446900", "on-surface-variant": "#c2cab0", "on-secondary-fixed-variant": "#004e5c", "tertiary": "#ffeae2", "on-secondary-container": "#00424e", "surface-variant": "#2d3449", "tertiary-fixed-dim": "#ffb690", "surface-container-low": "#131b2e", "secondary-container": "#03b5d3", "surface-dim": "#0b1326", "surface-container-lowest": "#060e20", "primary-fixed": "#b2f746", "inverse-surface": "#dae2fd", "surface-bright": "#31394d", "primary": "#ccff80", "error": "#ffb4ab", "on-surface": "#dae2fd", "on-tertiary-fixed-variant": "#783200", "primary-container": "#a3e635", "secondary-fixed": "#acedff", "on-primary-container": "#416400", "outline-variant": "#424936", "on-tertiary-container": "#974000", "outline": "#8c947c", "on-error-container": "#ffdad6", "background": "#0b1326", "surface-container-high": "#222a3d", "on-primary-fixed": "#121f00", "surface": "#0b1326", "primary-fixed-dim": "#98da27", "on-error": "#690005", "on-background": "#dae2fd", "surface-container-highest": "#2d3449", "on-primary": "#213600", "on-secondary": "#003640", "surface-container": "#171f33", "secondary": "#4cd7f6", "secondary-fixed-dim": "#4cd7f6", "error-container": "#93000a", "tertiary-container": "#ffc6aa", "on-tertiary-fixed": "#341100", "tertiary-fixed": "#ffdbca", "on-primary-fixed-variant": "#334f00", "inverse-on-surface": "#283044", "surface-tint": "#98da27", "on-tertiary": "#552100", "on-secondary-fixed": "#001f26" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-md": "1rem", "margin-mobile": "1rem", "space-sm": "0.5rem", "gutter": "1rem", "gutter-mobile": "0.75rem", "space-xl": "2.5rem", "space-xs": "0.25rem", "space-lg": "1.5rem", "margin": "1.5rem" }, "fontFamily": { "headline-lg": ["Plus Jakarta Sans"], "label-lg": ["Plus Jakarta Sans"], "metric-huge": ["Plus Jakarta Sans"], "display-hero-mobile": ["Plus Jakarta Sans"], "metric-huge-mobile": ["Plus Jakarta Sans"], "body-md": ["Inter"], "label-sm": ["Plus Jakarta Sans"], "display-hero": ["Plus Jakarta Sans"], "body-lg": ["Inter"], "label-md": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], "body-sm": ["Inter"], "headline-lg-mobile": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"] }, "fontSize": { "headline-lg": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "label-lg": ["16px", { "lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "700" }], "metric-huge": ["64px", { "lineHeight": "64px", "letterSpacing": "-0.04em", "fontWeight": "800" }], "display-hero-mobile": ["44px", { "lineHeight": "48px", "letterSpacing": "-0.03em", "fontWeight": "800" }], "metric-huge-mobile": ["48px", { "lineHeight": "48px", "letterSpacing": "-0.03em", "fontWeight": "800" }], "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.06em", "fontWeight": "700" }], "display-hero": ["56px", { "lineHeight": "60px", "letterSpacing": "-0.03em", "fontWeight": "800" }], "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }], "label-md": ["13px", { "lineHeight": "18px", "letterSpacing": "0.03em", "fontWeight": "600" }], "headline-md": ["24px", { "lineHeight": "30px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "body-sm": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "headline-lg-mobile": ["28px", { "lineHeight": "34px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-sm": ["20px", { "lineHeight": "26px", "fontWeight": "600" }] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style><title>FitHome</title></head><body class="bg-surface text-on-surface font-body-md text-body-md flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 bg-surface/85 backdrop-blur-xl pt-safe shadow-[0_1px_8px_rgba(0,0,0,0.25)]"><div class="h-16 px-margin-mobile flex items-center justify-between"><div class="flex items-center gap-space-sm"><img alt="FitHome Brand Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrAJUBgrbZCqtC_h83h2EkgG-x8duPV7txHCyXu6LCiUbeDNWQb9E7j-eWjfNowpa-tcdXth7S3ufveppn9U8ZqtKlwszeAxmKXuoA6EQK3efRiIs6jSUw7QQpWzCVqWDq_sV_gChWtRFzSc8aH9cLNO0E2wCXLD4SNzbaO2-rNVMU4T08zd0cSP-22n7YPXJN-TObQMGJN1T9am1xENfUA0GPD64l6rFw1JhFKXso-H"/><span class="font-headline-sm text-headline-sm tracking-tight text-on-surface">FitHome</span><span class="hidden sm:inline-block text-on-surface-variant font-label-md text-label-md ml-space-xs">• Riwayat Latihan &amp; Catatan Berat</span></div><div class="flex items-center gap-space-sm"><button aria-label="Pemberitahuan" class="min-w-[44px] min-h-[44px] flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors"><span class="material-symbols-outlined text-[24px]">notifications</span></button><a aria-label="Profil Pengguna" class="flex items-center justify-center min-w-[44px] min-h-[44px]" data-path="profil-pengguna" href="profil.html"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-2 ring-primary-container/30" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCY0zwEQ2-aUGsmsW_sucJMUhvFHEHACJRZ3dK2oVEFjZuEHj8-vwG51e0JQMyjvNZwAY3DUROLUcBjP5mf4yC_Z0P0spGOiNwK6shLf7lcas-_cD1Z6Spf2O3nujtHJpAx5aZajLTxvglgcbzmk2UL4muyCAapdQnFXkVr74oaPQhcJQaM-1lneeNvatnxYErdHmX2LxNOSj-f_EMpj87Y49gLrC-hxpvwFOvmSWk"/></a></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-24 bg-surface"><div class="flex flex-col w-full px-margin-mobile space-y-space-lg">
+<!-- Interactive Segmented Tab Switcher -->
+<div class="w-full bg-surface-container-high p-1 rounded-full flex items-center justify-between shadow-inner">
+<button class="flex-1 py-2.5 px-space-sm rounded-full font-label-md text-label-md transition-all duration-300 flex items-center justify-center gap-1.5 bg-primary-container text-on-primary-container shadow-md" id="tab-workout" onclick="switchMainTab('workout')">
+<span class="material-symbols-outlined text-[18px]">history</span>
+<span>Semua Riwayat</span>
+</button>
+<button class="flex-1 py-2.5 px-space-sm rounded-full font-label-md text-label-md transition-all duration-300 flex items-center justify-center gap-1.5 text-on-surface-variant hover:text-on-surface" id="tab-weight" onclick="switchMainTab('weight')">
+<span class="material-symbols-outlined text-[18px]">monitor_weight</span>
+<span>Catatan Berat</span>
+</button>
+</div>
+<!-- Weight Tracking Metric Bento Card -->
+<div class="bg-surface-container rounded-2xl p-space-md shadow-xl relative overflow-hidden">
+<div class="absolute -right-12 -top-12 w-36 h-36 bg-primary-container/10 rounded-full blur-2xl pointer-events-none"></div>
+<!-- Top Stats Row -->
+<div class="flex items-start justify-between relative z-10">
+<div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[18px]">scale</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Timbangan Terkini</span>
+</div>
+<div class="flex items-baseline gap-2 mt-1">
+<span class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface font-extrabold tracking-tight">68.5</span>
+<span class="font-label-md text-label-md text-on-surface-variant">kg</span>
+<span class="inline-flex items-center gap-0.5 px-2 py-0.5 rounded-full bg-primary-container/20 text-primary font-label-sm text-label-sm ml-1">
+<span class="material-symbols-outlined text-[14px]">trending_down</span>
+            -2.1 kg bln ini
+          </span>
+</div>
+</div>
+<div class="text-right">
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Target Ideal</span>
+<div class="flex items-baseline justify-end gap-1 mt-1">
+<span class="font-headline-sm text-headline-sm text-secondary font-bold">65.0</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">kg</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant/80 block mt-0.5">Sisa 3.5 kg</span>
+</div>
+</div>
+<!-- Mini Progress Bar / Target Indicator -->
+<div class="mt-3 relative z-10">
+<div class="flex justify-between items-center text-[11px] font-label-sm text-on-surface-variant mb-1">
+<span>Awal: 72.0 kg</span>
+<span class="text-primary font-semibold">Progres 50%</span>
+<span>Goal: 65.0 kg</span>
+</div>
+<div class="w-full bg-surface-container-highest h-2 rounded-full overflow-hidden">
+<div class="bg-primary-container h-full rounded-full transition-all duration-700" style="width: 50%;"></div>
+</div>
+</div>
+<!-- Weight Trend Mini Area / Sparkline Visual -->
+<div class="mt-4 pt-3 bg-surface-container-lowest/60 rounded-xl p-3">
+<div class="flex justify-between items-center mb-2">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-semibold">Tren 6 Minggu Terakhir</span>
+<span class="font-label-sm text-label-sm text-secondary-fixed-dim">BMI 22.4 (Normal)</span>
+</div>
+<!-- Inline Lightweight SVG Trend Chart -->
+<div class="w-full h-20 relative">
+<svg class="w-full h-full overflow-visible" preserveaspectratio="none" viewbox="0 0 320 80">
+<defs>
+<lineargradient id="weightGrad" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#a3e635" stop-opacity="0.35"></stop>
+<stop offset="100%" stop-color="#a3e635" stop-opacity="0.0"></stop>
+</lineargradient>
+</defs>
+<!-- Grid Dotted lines -->
+<line stroke="#2d3449" stroke-dasharray="3,3" stroke-width="1" x1="0" x2="320" y1="20" y2="20"></line>
+<line stroke="#2d3449" stroke-dasharray="3,3" stroke-width="1" x1="0" x2="320" y1="50" y2="50"></line>
+<!-- Area Fill -->
+<polygon fill="url(#weightGrad)" points="10,20 70,36 130,48 190,56 250,62 310,68 310,80 10,80"></polygon>
+<!-- Polyline Trend -->
+<polyline fill="none" points="10,20 70,36 130,48 190,56 250,62 310,68" stroke="#a3e635" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></polyline>
+<!-- Data Points -->
+<circle class="fill-surface-container stroke-primary-container" cx="10" cy="20" r="3.5" stroke-width="2"></circle>
+<circle class="fill-surface-container stroke-primary-container" cx="70" cy="36" r="3.5" stroke-width="2"></circle>
+<circle class="fill-surface-container stroke-primary-container" cx="130" cy="48" r="3.5" stroke-width="2"></circle>
+<circle class="fill-surface-container stroke-primary-container" cx="190" cy="56" r="3.5" stroke-width="2"></circle>
+<circle class="fill-surface-container stroke-primary-container" cx="250" cy="62" r="3.5" stroke-width="2"></circle>
+<circle class="fill-primary-container stroke-surface-dim" cx="310" cy="68" r="4.5" stroke-width="2"></circle>
+</svg>
+</div>
+<!-- X-Axis Labels -->
+<div class="flex justify-between items-center font-label-sm text-[10px] text-on-surface-variant/70 mt-1 px-1">
+<span>15 Sep</span>
+<span>22 Sep</span>
+<span>29 Sep</span>
+<span>06 Okt</span>
+<span>13 Okt</span>
+<span class="text-primary font-bold">24 Okt</span>
+</div>
+</div>
+<!-- Action Button Modal Trigger -->
+<div class="mt-4 flex items-center gap-2">
+<button class="flex-1 py-3 px-space-md rounded-full bg-primary-container text-on-primary-container font-label-md text-label-md flex items-center justify-center gap-2 active:scale-95 transition-transform shadow-[0_0_18px_rgba(163,230,53,0.3)]" onclick="toggleModal('modal-weight-log')">
+<span class="material-symbols-outlined text-[20px]">add_circle</span>
+<span>Catat Berat Hari Ini</span>
+</button>
+<button aria-label="Filter Opsi" class="w-12 h-12 rounded-full bg-surface-container-high text-on-surface-variant flex items-center justify-center hover:text-primary transition-colors" onclick="toggleModal('modal-history-filter')">
+<span class="material-symbols-outlined text-[22px]">tune</span>
+</button>
+</div>
+</div>
+<!-- Monthly Overview Telemetry Strip -->
+<div class="bg-surface-container-low rounded-2xl p-space-md">
+<div class="flex items-center justify-between mb-3">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary"></span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">Performa Oktober</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary px-2 py-0.5 rounded-full bg-secondary-container/20">Target 90%</span>
+</div>
+<div class="grid grid-cols-3 gap-2">
+<div class="bg-surface-container rounded-xl p-2.5 flex flex-col items-center justify-center text-center">
+<span class="material-symbols-outlined text-primary text-[20px] mb-0.5">check_circle</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold leading-tight">18</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Sesi Tuntas</span>
+</div>
+<div class="bg-surface-container rounded-xl p-2.5 flex flex-col items-center justify-center text-center">
+<span class="material-symbols-outlined text-tertiary-fixed-dim text-[20px] mb-0.5">local_fire_department</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold leading-tight">4.850</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Total kkal</span>
+</div>
+<div class="bg-surface-container rounded-xl p-2.5 flex flex-col items-center justify-center text-center">
+<span class="material-symbols-outlined text-secondary-fixed-dim text-[20px] mb-0.5">timer</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold leading-tight">8j 20m</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Durasi Aktif</span>
+</div>
+</div>
+</div>
+<!-- Horizontal Filter Pills -->
+<div class="space-y-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-on-surface tracking-tight">Riwayat Aktivitas</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Urut Terbaru</span>
+</div>
+<div class="flex items-center gap-2 overflow-x-auto pb-1 -mx-margin-mobile px-margin-mobile">
+<button class="shrink-0 px-3.5 py-1.5 rounded-full bg-primary-container text-on-primary-container font-label-sm text-label-sm font-bold shadow-sm">
+        Bulan Ini (Oktober)
+      </button>
+<button class="shrink-0 px-3.5 py-1.5 rounded-full bg-surface-container-high text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm transition-colors">
+        HIIT
+      </button>
+<button class="shrink-0 px-3.5 py-1.5 rounded-full bg-surface-container-high text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm transition-colors">
+        Kekuatan
+      </button>
+<button class="shrink-0 px-3.5 py-1.5 rounded-full bg-surface-container-high text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm transition-colors">
+        Peregangan
+      </button>
+<button class="shrink-0 px-3.5 py-1.5 rounded-full bg-surface-container-high text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm transition-colors">
+        Selesai 100%
+      </button>
+</div>
+</div>
+<!-- WORKOUT HISTORY SECTION -->
+<div class="space-y-space-md" id="section-workout-logs">
+<!-- Card 1: Today Session -->
+<div class="bg-surface-container rounded-2xl p-space-md shadow-lg space-y-3 relative">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-center gap-2.5">
+<div class="w-10 h-10 rounded-xl bg-primary-container/20 text-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[22px]">fitness_center</span>
+</div>
+<div>
+<div class="flex items-center gap-1.5">
+<span class="font-label-sm text-label-sm text-primary font-bold">HARI INI</span>
+<span class="text-on-surface-variant text-[11px]">• 07:15 WIB</span>
+</div>
+<h3 class="font-label-lg text-label-lg text-on-surface font-bold tracking-tight">Full Body Tanpa Alat</h3>
+</div>
+</div>
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-primary-container/20 text-primary font-label-sm text-label-sm shrink-0">
+<span class="material-symbols-outlined text-[13px]">check</span>
+          Selesai 100%
+        </span>
+</div>
+<!-- Quick Metrics Strip -->
+<div class="grid grid-cols-3 gap-2 py-2 px-3 rounded-xl bg-surface-container-low text-center">
+<div class="flex items-center justify-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-secondary">schedule</span>
+<span class="font-label-md text-label-md text-on-surface">21 mnt</span>
+</div>
+<div class="flex items-center justify-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-tertiary-fixed-dim">local_fire_department</span>
+<span class="font-label-md text-label-md text-on-surface">215 kkal</span>
+</div>
+<div class="flex items-center justify-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-primary">done_all</span>
+<span class="font-label-md text-label-md text-on-surface">12 Gerakan</span>
+</div>
+</div>
+<!-- Note / Feedback callout -->
+<div class="bg-surface-container-high/60 rounded-xl p-2.5 flex items-start gap-2">
+<span class="material-symbols-outlined text-[16px] text-primary mt-0.5">favorite</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant text-xs leading-relaxed">
+          Detak rata-rata 142 bpm. Beban tubuh terasa lebih stabil dan ringan pada repetisi squats terakhir.
+        </p>
+</div>
+<div class="flex items-center justify-between pt-1">
+<div class="flex -space-x-1.5 items-center">
+<span class="px-2 py-0.5 rounded-md bg-surface-container-highest text-[10px] font-label-sm text-on-surface-variant">Push-ups</span>
+<span class="px-2 py-0.5 rounded-md bg-surface-container-highest text-[10px] font-label-sm text-on-surface-variant ml-1">Squat Jumps</span>
+<span class="px-2 py-0.5 rounded-md bg-surface-container-highest text-[10px] font-label-sm text-on-surface-variant ml-1">Plank</span>
+</div>
+<button class="text-secondary font-label-sm text-label-sm flex items-center gap-0.5 hover:underline">
+          Detail Sesi
+          <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Card 2: Yesterday Session -->
+<div class="bg-surface-container rounded-2xl p-space-md shadow-lg space-y-3">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-center gap-2.5">
+<div class="w-10 h-10 rounded-xl bg-secondary-container/20 text-secondary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[22px]">sports_martial_arts</span>
+</div>
+<div>
+<div class="flex items-center gap-1.5">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-bold">KEMARIN</span>
+<span class="text-on-surface-variant text-[11px]">• 18:30 WIB</span>
+</div>
+<h3 class="font-label-lg text-label-lg text-on-surface font-bold tracking-tight">Bentuk Perut Sixpack Rumahan</h3>
+</div>
+</div>
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-primary-container/20 text-primary font-label-sm text-label-sm shrink-0">
+<span class="material-symbols-outlined text-[13px]">check</span>
+          Selesai 100%
+        </span>
+</div>
+<div class="grid grid-cols-3 gap-2 py-2 px-3 rounded-xl bg-surface-container-low text-center">
+<div class="flex items-center justify-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-secondary">schedule</span>
+<span class="font-label-md text-label-md text-on-surface">15 mnt</span>
+</div>
+<div class="flex items-center justify-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-tertiary-fixed-dim">local_fire_department</span>
+<span class="font-label-md text-label-md text-on-surface">140 kkal</span>
+</div>
+<div class="flex items-center justify-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-primary">done_all</span>
+<span class="font-label-md text-label-md text-on-surface">8 Gerakan</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="text-on-surface-variant text-[11px] font-label-sm">Fokus Inti • Crunch, Leg Raise, Russian Twist</span>
+<button class="text-secondary font-label-sm text-label-sm flex items-center gap-0.5 hover:underline">
+          Detail Sesi
+          <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Card 3: 3 Days Ago (Personal Record) -->
+<div class="bg-surface-container rounded-2xl p-space-md shadow-lg space-y-3 relative overflow-hidden">
+<!-- Ambient PR Highlight Ribbon -->
+<div class="absolute -right-10 top-3 bg-primary-container text-on-primary-container text-[9px] font-label-sm uppercase px-10 py-0.5 rotate-45 font-extrabold shadow-sm">
+        PR BARU
+      </div>
+<div class="flex items-start justify-between gap-2 pr-6">
+<div class="flex items-center gap-2.5">
+<div class="w-10 h-10 rounded-xl bg-tertiary-container/30 text-tertiary-fixed-dim flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[22px]">bolt</span>
+</div>
+<div>
+<div class="flex items-center gap-1.5">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-bold">3 HARI LALU</span>
+<span class="text-on-surface-variant text-[11px]">• 06:45 WIB</span>
+</div>
+<h3 class="font-label-lg text-label-lg text-on-surface font-bold tracking-tight">HIIT Pembakar Lemak Ekstrem</h3>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-3 gap-2 py-2 px-3 rounded-xl bg-surface-container-low text-center">
+<div class="flex items-center justify-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-secondary">schedule</span>
+<span class="font-label-md text-label-md text-on-surface">20 mnt</span>
+</div>
+<div class="flex items-center justify-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-tertiary-fixed-dim">local_fire_department</span>
+<span class="font-label-md text-label-md text-on-surface">220 kkal</span>
+</div>
+<div class="flex items-center justify-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-primary">emoji_events</span>
+<span class="font-label-md text-label-md text-primary">+150 XP</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="text-on-surface-variant text-[11px] font-label-sm">Burpees Maksimal 45 repetisi tanpa henti</span>
+<button class="text-secondary font-label-sm text-label-sm flex items-center gap-0.5 hover:underline">
+          Detail Sesi
+          <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Card 4: 5 Days Ago (Recovery) -->
+<div class="bg-surface-container rounded-2xl p-space-md shadow-lg space-y-3">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-center gap-2.5">
+<div class="w-10 h-10 rounded-xl bg-surface-variant text-on-surface-variant flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[22px]">self_improvement</span>
+</div>
+<div>
+<div class="flex items-center gap-1.5">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-bold">5 HARI LALU</span>
+<span class="text-on-surface-variant text-[11px]">• 19:00 WIB</span>
+</div>
+<h3 class="font-label-lg text-label-lg text-on-surface font-bold tracking-tight">Mobilitas &amp; Peregangan Malam</h3>
+</div>
+</div>
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-variant text-on-surface-variant font-label-sm text-label-sm shrink-0">
+<span class="material-symbols-outlined text-[13px]">spa</span>
+          Pemulihan
+        </span>
+</div>
+<div class="grid grid-cols-3 gap-2 py-2 px-3 rounded-xl bg-surface-container-low text-center">
+<div class="flex items-center justify-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-secondary">schedule</span>
+<span class="font-label-md text-label-md text-on-surface">12 mnt</span>
+</div>
+<div class="flex items-center justify-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-tertiary-fixed-dim">local_fire_department</span>
+<span class="font-label-md text-label-md text-on-surface">65 kkal</span>
+</div>
+<div class="flex items-center justify-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-primary">done_all</span>
+<span class="font-label-md text-label-md text-on-surface">6 Gerakan</span>
+</div>
+</div>
+</div>
+</div>
+<!-- WEIGHT LOG DETAIL LIST (Visible in Tab or Expanded) -->
+<div class="space-y-space-md" id="section-weight-logs">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-on-surface tracking-tight">Riwayat Catatan Berat</span>
+<span class="font-label-sm text-label-sm text-primary">Konsistensi Mingguan</span>
+</div>
+<div class="bg-surface-container rounded-2xl p-space-md space-y-3">
+<!-- Log Row 1 -->
+<div class="flex items-center justify-between pb-3 border-b border-surface-container-highest/60">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-full bg-primary-container/20 text-primary flex items-center justify-center font-label-sm text-label-sm font-bold">
+            24
+          </div>
+<div>
+<span class="font-label-md text-label-md text-on-surface font-bold block">Kamis, 24 Okt 2024</span>
+<span class="font-label-sm text-[11px] text-on-surface-variant">Pagi hari sebelum sarapan</span>
+</div>
+</div>
+<div class="text-right">
+<span class="font-headline-sm text-headline-sm text-on-surface font-extrabold">68.5 <span class="text-xs font-normal text-on-surface-variant">kg</span></span>
+<span class="flex items-center justify-end text-[11px] font-label-sm text-primary gap-0.5">
+<span class="material-symbols-outlined text-[13px]">arrow_downward</span> -0.4 kg
+          </span>
+</div>
+</div>
+<!-- Log Row 2 -->
+<div class="flex items-center justify-between pb-3 border-b border-surface-container-highest/60">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-full bg-surface-container-high text-on-surface-variant flex items-center justify-center font-label-sm text-label-sm font-bold">
+            17
+          </div>
+<div>
+<span class="font-label-md text-label-md text-on-surface font-bold block">Kamis, 17 Okt 2024</span>
+<span class="font-label-sm text-[11px] text-on-surface-variant">Pagi hari</span>
+</div>
+</div>
+<div class="text-right">
+<span class="font-headline-sm text-headline-sm text-on-surface font-extrabold">68.9 <span class="text-xs font-normal text-on-surface-variant">kg</span></span>
+<span class="flex items-center justify-end text-[11px] font-label-sm text-primary gap-0.5">
+<span class="material-symbols-outlined text-[13px]">arrow_downward</span> -0.5 kg
+          </span>
+</div>
+</div>
+<!-- Log Row 3 -->
+<div class="flex items-center justify-between pb-3 border-b border-surface-container-highest/60">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-full bg-surface-container-high text-on-surface-variant flex items-center justify-center font-label-sm text-label-sm font-bold">
+            10
+          </div>
+<div>
+<span class="font-label-md text-label-md text-on-surface font-bold block">Kamis, 10 Okt 2024</span>
+<span class="font-label-sm text-[11px] text-on-surface-variant">Pagi hari</span>
+</div>
+</div>
+<div class="text-right">
+<span class="font-headline-sm text-headline-sm text-on-surface font-extrabold">69.4 <span class="text-xs font-normal text-on-surface-variant">kg</span></span>
+<span class="flex items-center justify-end text-[11px] font-label-sm text-primary gap-0.5">
+<span class="material-symbols-outlined text-[13px]">arrow_downward</span> -0.7 kg
+          </span>
+</div>
+</div>
+<!-- Log Row 4 -->
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-full bg-surface-container-high text-on-surface-variant flex items-center justify-center font-label-sm text-label-sm font-bold">
+            03
+          </div>
+<div>
+<span class="font-label-md text-label-md text-on-surface font-bold block">Kamis, 03 Okt 2024</span>
+<span class="font-label-sm text-[11px] text-on-surface-variant">Pagi hari</span>
+</div>
+</div>
+<div class="text-right">
+<span class="font-headline-sm text-headline-sm text-on-surface font-extrabold">70.1 <span class="text-xs font-normal text-on-surface-variant">kg</span></span>
+<span class="flex items-center justify-end text-[11px] font-label-sm text-primary gap-0.5">
+<span class="material-symbols-outlined text-[13px]">arrow_downward</span> -0.5 kg
+          </span>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Data Export & Integration Banner -->
+<div class="bg-surface-container-high/80 rounded-2xl p-space-md flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-secondary-container/20 text-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">sync_alt</span>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-on-surface font-bold">Sinkronisasi Kesehatan</h4>
+<p class="font-body-sm text-[12px] text-on-surface-variant">Terhubung dengan Apple Health &amp; Google Fit</p>
+</div>
+</div>
+<button class="px-3.5 py-2 rounded-xl bg-surface-container-lowest text-secondary-fixed font-label-sm text-label-sm font-semibold flex items-center gap-1 active:scale-95 transition-transform" onclick="toggleModal('modal-export')">
+<span class="material-symbols-outlined text-[16px]">file_download</span>
+<span>Unduh PDF</span>
+</button>
+</div>
+<!-- MODAL: Quick Log Weight Bottom Sheet -->
+<div class="fixed inset-0 z-50 bg-black/70 backdrop-blur-md hidden flex flex-col justify-end" id="modal-weight-log">
+<div class="bg-surface-container p-space-lg rounded-t-3xl space-y-space-md max-w-lg mx-auto w-full shadow-2xl">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[24px]">scale</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Catat Berat Hari Ini</h3>
+</div>
+<button class="w-8 h-8 rounded-full bg-surface-container-high text-on-surface-variant flex items-center justify-center" onclick="toggleModal('modal-weight-log')">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<!-- Quick Wheel/Slider Simulation -->
+<div class="bg-surface-container-lowest p-space-lg rounded-2xl flex flex-col items-center justify-center text-center">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider mb-1">Angka Timbangan (KG)</span>
+<div class="flex items-baseline justify-center gap-2">
+<span class="font-metric-huge-mobile text-metric-huge-mobile font-extrabold text-primary">68.3</span>
+<span class="font-headline-sm text-headline-sm text-on-surface-variant">kg</span>
+</div>
+<div class="flex items-center gap-4 mt-3">
+<button class="w-10 h-10 rounded-full bg-surface-container-high text-on-surface font-headline-sm flex items-center justify-center active:scale-90">-</button>
+<span class="text-xs text-on-surface-variant">Ketuk untuk atur presisi</span>
+<button class="w-10 h-10 rounded-full bg-surface-container-high text-on-surface font-headline-sm flex items-center justify-center active:scale-90">+</button>
+</div>
+</div>
+<!-- Optional Body Fat or Notes -->
+<div class="space-y-2">
+<label class="font-label-sm text-label-sm text-on-surface-variant block">Catatan Tambahan (Opsional)</label>
+<input class="w-full bg-surface-container-low text-on-surface rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-1 focus:ring-primary placeholder-on-surface-variant/50" placeholder="Contoh: Ditimbang setelah bangun tidur &amp; buang air" type="text"/>
+</div>
+<!-- Submit CTA -->
+<button class="w-full py-3.5 rounded-full bg-primary-container text-on-primary-container font-label-lg text-label-lg font-bold flex items-center justify-center gap-2 shadow-[0_0_20px_rgba(163,230,53,0.35)] active:scale-98" onclick="saveWeightEntry()">
+<span class="material-symbols-outlined text-[20px]">check_circle</span>
+<span>Simpan Catatan</span>
+</button>
+</div>
+</div>
+<!-- MODAL: Export Report Bottom Sheet -->
+<div class="fixed inset-0 z-50 bg-black/70 backdrop-blur-md hidden flex flex-col justify-end" id="modal-export">
+<div class="bg-surface-container p-space-lg rounded-t-3xl space-y-space-md max-w-lg mx-auto w-full shadow-2xl">
+<div class="flex items-center justify-between">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Ekspor Laporan Kebugaran</h3>
+<button class="w-8 h-8 rounded-full bg-surface-container-high text-on-surface-variant flex items-center justify-center" onclick="toggleModal('modal-export')">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+        Pilih format berkas untuk membagikan rekap progres latihan atau membawanya saat konsultasi gizi/pelatih:
+      </p>
+<div class="space-y-2">
+<button class="w-full p-3.5 rounded-xl bg-surface-container-high flex items-center justify-between hover:bg-surface-bright transition-colors" onclick="downloadReport('PDF')">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">picture_as_pdf</span>
+<div class="text-left">
+<span class="font-label-md text-label-md text-on-surface font-bold block">Dokumen PDF Resmi</span>
+<span class="text-[11px] text-on-surface-variant">Lengkap grafik berat badan &amp; log bulanan</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-[18px]">chevron_right</span>
+</button>
+<button class="w-full p-3.5 rounded-xl bg-surface-container-high flex items-center justify-between hover:bg-surface-bright transition-colors" onclick="downloadReport('CSV')">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary">table_view</span>
+<div class="text-left">
+<span class="font-label-md text-label-md text-on-surface font-bold block">Spreadsheet Data Mentah (CSV)</span>
+<span class="text-[11px] text-on-surface-variant">Kompatibel Excel, Apple Health, Google Sheets</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-[18px]">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Inline Script for Delightful Tab Switching and Micro-Interactions -->
+<script>
+    function switchMainTab(tab) {
+      const btnWorkout = document.getElementById('tab-workout');
+      const btnWeight = document.getElementById('tab-weight');
+      const secWorkout = document.getElementById('section-workout-logs');
+      const secWeight = document.getElementById('section-weight-logs');
+
+      if (tab === 'workout') {
+        btnWorkout.className = 'flex-1 py-2.5 px-space-sm rounded-full font-label-md text-label-md transition-all duration-300 flex items-center justify-center gap-1.5 bg-primary-container text-on-primary-container shadow-md';
+        btnWeight.className = 'flex-1 py-2.5 px-space-sm rounded-full font-label-md text-label-md transition-all duration-300 flex items-center justify-center gap-1.5 text-on-surface-variant hover:text-on-surface';
+        
+        secWorkout.classList.remove('hidden');
+        secWeight.classList.remove('hidden'); // Keep weight logs reachable, or emphasize workout
+      } else {
+        btnWeight.className = 'flex-1 py-2.5 px-space-sm rounded-full font-label-md text-label-md transition-all duration-300 flex items-center justify-center gap-1.5 bg-primary-container text-on-primary-container shadow-md';
+        btnWorkout.className = 'flex-1 py-2.5 px-space-sm rounded-full font-label-md text-label-md transition-all duration-300 flex items-center justify-center gap-1.5 text-on-surface-variant hover:text-on-surface';
+
+        secWorkout.classList.add('hidden');
+        secWeight.classList.remove('hidden');
+        secWeight.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+
+    function toggleModal(modalId) {
+      const modal = document.getElementById(modalId);
+      if (modal) {
+        modal.classList.toggle('hidden');
+      }
+    }
+
+    function saveWeightEntry() {
+      toggleModal('modal-weight-log');
+      // Gentle notification simulation
+      const toast = document.createElement('div');
+      toast.className = 'fixed top-20 left-1/2 -translate-x-1/2 z-50 bg-primary-container text-on-primary-container px-4 py-2.5 rounded-full font-label-md text-label-md shadow-2xl flex items-center gap-2 animate-bounce';
+      toast.innerHTML = '<span class="material-symbols-outlined text-[18px]">verified</span> Berhasil menyimpan berat: 68.3 kg!';
+      document.body.appendChild(toast);
+      setTimeout(() => toast.remove(), 3200);
+    }
+
+    function downloadReport(type) {
+      toggleModal('modal-export');
+      const toast = document.createElement('div');
+      toast.className = 'fixed top-20 left-1/2 -translate-x-1/2 z-50 bg-secondary text-on-secondary px-4 py-2.5 rounded-full font-label-md text-label-md shadow-2xl flex items-center gap-2';
+      toast.innerHTML = '<span class="material-symbols-outlined text-[18px]">downloading</span> Menyiapkan berkas ' + type + '...';
+      document.body.appendChild(toast);
+      setTimeout(() => toast.remove(), 2500);
+    }
+  </script>
+</div></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_-4px_24px_rgba(0,0,0,0.5)]" data-active-classes="text-primary font-bold"><div class="flex justify-around items-center h-20 px-space-xs"><a class="flex flex-col items-center justify-center min-w-[48px] min-h-[52px] px-space-xs text-on-surface-variant hover:text-on-surface transition-colors gap-0.5" data-path="beranda-&amp;-rencana-harian" href="index.html"><span class="material-symbols-outlined text-[24px]">home</span><span class="font-label-sm text-label-sm tracking-wide">Beranda</span></a><a class="flex flex-col items-center justify-center min-w-[48px] min-h-[52px] px-space-xs text-on-surface-variant hover:text-on-surface transition-colors gap-0.5" data-path="katalog-latihan-rumahan" href="katalog.html"><span class="material-symbols-outlined text-[24px]">fitness_center</span><span class="font-label-sm text-label-sm tracking-wide">Latihan</span></a><a class="flex flex-col items-center justify-center min-w-[48px] min-h-[52px] px-space-xs text-on-surface-variant hover:text-on-surface transition-colors gap-0.5" data-path="sesi-latihan-aktif" href="sesi.html"><div class="relative flex items-center justify-center"><span class="material-symbols-outlined text-[26px]">play_circle</span><span class="absolute -top-1 -right-1 w-2 h-2 rounded-full bg-primary-container animate-pulse"></span></div><span class="font-label-sm text-label-sm tracking-wide">Sesi Aktif</span></a><a aria-current="page" class="flex flex-col items-center justify-center min-w-[48px] min-h-[52px] px-space-xs transition-colors gap-0.5 text-primary font-bold" data-path="riwayat-latihan-&amp;-catatan-berat" href="riwayat.html"><span class="material-symbols-outlined text-[24px]">history_edu</span><span class="font-label-sm text-label-sm tracking-wide">Riwayat</span></a><a class="flex flex-col items-center justify-center min-w-[48px] min-h-[52px] px-space-xs text-on-surface-variant hover:text-on-surface transition-colors gap-0.5" data-path="ringkasan-&amp;-statistik-kemajuan" href="statistik.html"><span class="material-symbols-outlined text-[24px]">leaderboard</span><span class="font-label-sm text-label-sm tracking-wide">Statistik</span></a></div></nav><script>if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.serviceWorker.register('sw.js'))}</script></body></html>
